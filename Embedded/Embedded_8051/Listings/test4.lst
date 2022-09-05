@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  TEST4                                                                09/01/2022 13:27:49 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\test4.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE test4.asm SET(SMALL) DEBUG PRINT(.\Listings\test4.lst) OBJECT(.\Objects
+                      \test4.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 7441              2                     MOV A,#41H
+0002 D2A1              3                     SETB P2.1
+0004 D2A1              4                     SETB P2.1
+0006 7A08              5                     MOV R2,#8
+0008 13                6     HERE:   RRC A
+0009 92A1              7                     MOV P2.1,C
+000B DAFB              8                     DJNZ R2,HERE
+000D D2A1              9                     SETB P2.1
+000F D2A1             10                     SETB P2.1
+                      11                     
+                      12                     
+*** WARNING #A41 IN 12 (test4.asm, LINE 12): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  TEST4                                                                09/01/2022 13:27:49 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0008H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

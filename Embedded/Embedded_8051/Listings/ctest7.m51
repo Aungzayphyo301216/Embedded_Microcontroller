@@ -1,0 +1,74 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  07:08:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\ctest7.obj TO .\Objects\ctest7 PRINT (.\Listings\ctest7.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\ctest7.obj (CTEST7)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\ctest7 (CTEST7)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0006H     UNIT         ?PR?MAIN?CTEST7
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\ctest7 (CTEST7)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?CTEST7
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\ctest7 (CTEST7)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CTEST7
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:080CH         PUBLIC        main
+  B:00A0H.4       PUBLIC        mybit
+  -------         PROC          MAIN
+  C:080CH         LINE#         4
+  C:080CH         LINE#         5
+  C:080CH         LINE#         6
+  C:080CH         LINE#         7
+  C:080CH         LINE#         8
+  C:080EH         LINE#         9
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  07:08:44  PAGE 2
+
+
+  C:0810H         LINE#         10
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        CTEST7
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0006H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=21
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,80 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  14:26:06  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\sendbit.obj TO .\Objects\sendbit PRINT (.\Listings\sendbit.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\sendbit.obj (SENDBIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\sendbit (SENDBIT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0018H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?SENDBIT
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     000AH     UNIT         ?PR?MAIN?SENDBIT
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\sendbit (SENDBIT)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SENDBIT
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\sendbit (SENDBIT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SENDBIT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  B:0020H.0       PUBLIC        membit
+  D:00A0H         PUBLIC        P2
+  B:0090H.0       PUBLIC        inbit
+  B:00A0H.7       PUBLIC        outbit
+  C:080CH         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  14:26:06  PAGE 2
+
+
+  C:080CH         LINE#         6
+  C:080CH         LINE#         7
+  C:080CH         LINE#         8
+  C:080CH         LINE#         9
+  C:080CH         LINE#         10
+  C:0810H         LINE#         11
+  C:0814H         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SENDBIT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000AH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.1 xdata=0 code=25
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

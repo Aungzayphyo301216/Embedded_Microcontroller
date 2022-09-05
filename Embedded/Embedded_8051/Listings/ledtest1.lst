@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.0.0   LEDTEST1                                                          09/04/2022 15:23:19 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LEDTEST1
+OBJECT MODULE PLACED IN .\Objects\ledtest1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ledtest1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -ledtest1.lst) TABS(2) OBJECT(.\Objects\ledtest1.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          //for 11.0592MHz Crystal
+   3          void delay(unsigned int count)
+   4          {
+   5   1        unsigned int i;
+   6   1        while(count)
+   7   1        {
+   8   2          i=115;
+   9   2          while (i>0)
+  10   2            i--;
+  11   2          count--;
+  12   2        }
+  13   1      }
+  14          void main ()
+  15          {
+  16   1        P2=0x00;
+  17   1        delay(1000);
+  18   1        P2=0xFF;
+  19   1        delay(1000);
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     45    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

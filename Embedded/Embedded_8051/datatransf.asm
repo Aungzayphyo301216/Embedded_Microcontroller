@@ -1,0 +1,7 @@
+			ORG 0000H
+			MOV R5,#8
+			HERE:MOV C ,P2.7
+			RRC A
+			DJNZ R5,HERE
+			MOV R2,A
+			END

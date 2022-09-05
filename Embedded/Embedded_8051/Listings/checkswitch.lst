@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  CHECKSWITCH                                                          08/31/2022 07:19:44 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\checkswitch.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE checkswitch.asm SET(SMALL) DEBUG PRINT(.\Listings\checkswitch.lst) OBJE
+                      CT(.\Objects\checkswitch.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+  0096                 2                     SW EQU P1.6
+  00A0                 3                     MYDATA EQU P2
+0000 A296              4     HERE:           MOV C,SW
+0002 4005              5                             JC OVER
+0004 75A030            6                             MOV MYDATA,#'0'
+0007 80F7              7                             SJMP HERE
+0009 75A031            8     OVER:           MOV MYDATA,#'1'
+000C 80F2              9                             SJMP HERE
+                      10                             END
+A51 MACRO ASSEMBLER  CHECKSWITCH                                                          08/31/2022 07:19:44 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0000H   A   
+MYDATA . . . . . .  D ADDR   00A0H   A   
+OVER . . . . . . .  C ADDR   0009H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+SW . . . . . . . .  B ADDR   0090H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

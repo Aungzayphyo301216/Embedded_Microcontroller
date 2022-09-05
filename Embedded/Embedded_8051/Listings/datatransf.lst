@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  DATATRANSF                                                           09/01/2022 13:46:47 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\datatransf.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE datatransf.asm SET(SMALL) DEBUG PRINT(.\Listings\datatransf.lst) OBJECT
+                      (.\Objects\datatransf.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                             ORG 0000H
+0000 7D08              2                             MOV R5,#8
+0002 A2A6              3                             HERE:MOV C ,P2.6
+0004 13                4                             RRC A
+0005 DDFB              5                             DJNZ R5,HERE
+0007 FA                6                             MOV R2,A
+                       7                             END
+A51 MACRO ASSEMBLER  DATATRANSF                                                           09/01/2022 13:46:47 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0002H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  ADDBDC                                                               08/31/2022 17:12:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\addbdc.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE addbdc.asm SET(SMALL) DEBUG PRINT(.\Listings\addbdc.lst) OBJECT(.\Objec
+                      ts\addbdc.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 7840              2                     MOV R0,#40H
+0002 7905              3                     MOV R1,#05H
+0004 E4                4                     CLR A
+0005 FF                5                     MOV R7,A
+0006 26                6     BACK:   ADD A,@R0
+0007 D4                7                     DA A
+0008 5001              8                     JNC NEXT
+000A 0F                9                     INC R7
+000B 08               10     NEXT:   INC R0
+000C D9F8             11                     DJNZ R1,BACK
+                      12     
+                      13                     
+*** WARNING #A41 IN 13 (addbdc.asm, LINE 13): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  ADDBDC                                                               08/31/2022 17:12:17 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   0006H   A   
+NEXT . . . . . . .  C ADDR   000BH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

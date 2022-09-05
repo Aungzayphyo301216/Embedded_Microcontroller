@@ -1,0 +1,40 @@
+C51 COMPILER V9.60.0.0   LED_DEMO                                                          09/02/2022 12:50:17 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LED_DEMO
+OBJECT MODULE PLACED IN .\Objects\Led Demo.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Led Demo.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -Led Demo.lst) TABS(2) OBJECT(.\Objects\Led Demo.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #define LCDData P1
+   3          sbit en=P1^0;
+   4          
+   5          void main(void)
+   6          {
+   7   1        unsigned char message[]="The Earth is but One Country";
+   8   1        unsigned char z;
+   9   1        for (z=0;z<28;z++)
+  10   1          {
+  11   2            LCDData =message[z];
+  12   2            en=1;
+  13   2            en=0;
+  14   2          }
+  15   1        
+  16   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     46    ----
+   CONSTANT SIZE    =     29    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      29
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

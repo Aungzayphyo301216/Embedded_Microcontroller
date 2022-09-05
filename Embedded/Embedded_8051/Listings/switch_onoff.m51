@@ -1,0 +1,101 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/04/2022  18:53:08  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\switch_onoff.obj TO .\Objects\switch_onoff PRINT (.\Listings\switch_onoff.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\switch_onoff.obj (SWITCH_ONOFF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (RAND)
+
+
+LINK MAP OF MODULE:  .\Objects\switch_onoff (SWITCH_ONOFF)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?RAND?RAND
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     004DH     UNIT         ?PR?RAND?RAND
+            CODE    084DH     0010H     UNIT         ?PR?MAIN?SWITCH_ONOFF
+            CODE    085DH     000FH     UNIT         ?PR?WAIT_A_SECOND?SWITCH_ONOFF
+            CODE    086CH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\switch_onoff (SWITCH_ONOFF)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?SWITCH_ONOFF
+
+?PR?MAIN?SWITCH_ONOFF
+  +--> ?PR?RAND?RAND
+  +--> ?PR?WAIT_A_SECOND?SWITCH_ONOFF
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\switch_onoff (SWITCH_ONOFF)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SWITCH_ONOFF
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:084DH         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/04/2022  18:53:08  PAGE 2
+
+
+  C:085DH         PUBLIC        wait_a_second
+  -------         PROC          WAIT_A_SECOND
+  -------         DO            
+  D:0006H         SYMBOL        x
+  -------         ENDDO         
+  C:085DH         LINE#         3
+  C:085DH         LINE#         4
+  C:085DH         LINE#         6
+  C:086BH         LINE#         7
+  -------         ENDPROC       WAIT_A_SECOND
+  -------         PROC          MAIN
+  -------         DO            
+  D:0004H         SYMBOL        led
+  -------         ENDDO         
+  C:084DH         LINE#         9
+  C:084DH         LINE#         10
+  C:084DH         LINE#         12
+  C:084DH         LINE#         13
+  C:084DH         LINE#         14
+  C:0854H         LINE#         15
+  C:0858H         LINE#         17
+  C:085BH         LINE#         18
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        SWITCH_ONOFF
+
+  -------         MODULE        RAND
+  D:0008H         PUBLIC        ?SRAND?BYTE
+  C:0800H         PUBLIC        RAND
+  C:0842H         PUBLIC        _SRAND
+  -------         ENDMOD        RAND
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 001FH BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=123
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

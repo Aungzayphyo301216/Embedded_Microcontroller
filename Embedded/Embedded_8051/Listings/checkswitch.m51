@@ -1,0 +1,51 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    08/31/2022  07:19:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\checkswitch.obj TO .\Objects\checkswitch PRINT (.\Listings\checkswitch.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\checkswitch.obj (CHECKSWITCH)
+
+
+LINK MAP OF MODULE:  .\Objects\checkswitch (CHECKSWITCH)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     000EH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\checkswitch (CHECKSWITCH)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CHECKSWITCH
+  C:0000H         SYMBOL        HERE
+  D:00A0H         SYMBOL        MYDATA
+  C:0009H         SYMBOL        OVER
+  D:0090H         SYMBOL        P1
+  D:00A0H         SYMBOL        P2
+  B:0090H.6       SYMBOL        SW
+  C:0000H         LINE#         4
+  C:0002H         LINE#         5
+  C:0004H         LINE#         6
+  C:0007H         LINE#         7
+  C:0009H         LINE#         8
+  C:000CH         LINE#         9
+  -------         ENDMOD        CHECKSWITCH
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000EH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=14
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,3 @@
+".\Objects\divided.obj" 
+TO ".\Objects\divided" 
+PRINT(".\Listings\divided.m51")

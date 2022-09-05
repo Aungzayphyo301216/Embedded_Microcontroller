@@ -1,0 +1,39 @@
+C51 COMPILER V9.60.0.0   LEDTEST                                                           09/02/2022 07:03:07 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LEDTEST
+OBJECT MODULE PLACED IN .\Objects\ledtest.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ledtest.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\l
+                    -edtest.lst) TABS(2) OBJECT(.\Objects\ledtest.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          void main (void)
+   4          {
+   5   1        unsigned char mybyte;
+   6   1        P0=0xFF;
+   7   1        while(1)
+   8   1        {
+   9   2            mybyte=P0;
+  10   2          if (mybyte<100)
+  11   2            P1=mybyte;
+  12   2          else
+  13   2            P2=mybyte;
+  14   2        }
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     23    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

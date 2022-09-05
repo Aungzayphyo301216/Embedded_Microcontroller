@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  TIMER1                                                               09/03/2022 04:33:12 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\timer1.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE timer1.asm SET(SMALL) DEBUG PRINT(.\Listings\timer1.lst) OBJECT(.\Objec
+                      ts\timer1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 C2A3              2                     CLR P2.3
+0002 758901            3                     MOV TMOD,#01
+0005 758A00            4                     MOV TL0,#0
+0008 758CEE            5                     MOV TH0,#0EEH
+000B D2A3              6                     SETB P2.3
+000D D28C              7                     SETB TR0
+000F 308DFD            8     AGAIN:  JNB TF0,AGAIN
+0012 C28C              9                     CLR TR0
+0014 C28D             10                     CLR TF0
+                      11                     END
+A51 MACRO ASSEMBLER  TIMER1                                                               09/03/2022 04:33:12 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   000FH   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

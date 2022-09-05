@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  1S_FIND                                                              09/01/2022 14:45:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\1s_find.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE 1s_find.asm SET(SMALL) DEBUG PRINT(.\Listings\1s_find.lst) OBJECT(.\Obj
+                      ects\1s_find.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 7900              2                     MOV R1,#0
+0002 7A08              3                     MOV R2,#8
+0004 7497              4                     MOV A,#97H
+0006 33                5     AGAIN:          RLC     A
+0007 5001              6                     JNC NEXT
+0009 09                7                     INC R1
+000A DAFA              8     NEXT:   DJNZ R2,AGAIN
+                       9                     
+*** WARNING #A41 IN 9 (1s_find.asm, LINE 9): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  1S_FIND                                                              09/01/2022 14:45:03 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0006H   A   
+NEXT . . . . . . .  C ADDR   000AH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

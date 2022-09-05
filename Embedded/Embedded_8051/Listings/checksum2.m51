@@ -1,0 +1,95 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  16:29:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\checksum2.obj TO .\Objects\checksum2 PRINT (.\Listings\checksum2.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\checksum2.obj (CHECKSUM2)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  .\Objects\checksum2 (CHECKSUM2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0005H     UNIT         _DATA_GROUP_
+            IDATA   000DH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    08F6H     0035H     UNIT         ?PR?MAIN?CHECKSUM2
+            CODE    092BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0937H     0005H     UNIT         ?CO?CHECKSUM2
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\checksum2 (CHECKSUM2)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?CHECKSUM2
+
+?PR?MAIN?CHECKSUM2             0008H    0005H
+  +--> ?CO?CHECKSUM2
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\checksum2 (CHECKSUM2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CHECKSUM2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:08F6H         PUBLIC        main
+  C:0937H         SYMBOL        _?ix1000
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  16:29:44  PAGE 2
+
+
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        mydata
+  D:0007H         SYMBOL        chksum
+  D:0006H         SYMBOL        x
+  -------         ENDDO         
+  C:08F6H         LINE#         3
+  C:08F6H         LINE#         4
+  C:08F6H         LINE#         5
+  C:0909H         LINE#         6
+  C:090BH         LINE#         8
+  C:0916H         LINE#         9
+  C:0916H         LINE#         10
+  C:091DH         LINE#         11
+  C:0920H         LINE#         12
+  C:0923H         LINE#         13
+  C:0927H         LINE#         15
+  C:092AH         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        CHECKSUM2
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003AH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=14.0 xdata=0 code=319
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

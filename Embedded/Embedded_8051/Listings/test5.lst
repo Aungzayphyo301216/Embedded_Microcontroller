@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  TEST5                                                                09/01/2022 14:32:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\test5.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE test5.asm SET(SMALL) DEBUG PRINT(.\Listings\test5.lst) OBJECT(.\Objects
+                      \test5.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 D3                2                     SETB C
+0001 72A2              3                     ORL C,P2.2
+0003 92A2              4                     MOV P2.2,C
+0005 C3                5                     CLR C
+0006 82A5              6                     ANL C,P2.5
+0008 92A5              7                     MOV P2.5,C
+                       8                     END
+A51 MACRO ASSEMBLER  TEST5                                                                09/01/2022 14:32:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

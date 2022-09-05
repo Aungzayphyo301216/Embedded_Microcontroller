@@ -1,0 +1,50 @@
+A51 MACRO ASSEMBLER  DATACOPY                                                             08/31/2022 08:01:09 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\datacopy.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE datacopy.asm SET(SMALL) DEBUG PRINT(.\Listings\datacopy.lst) OBJECT(.\O
+                      bjects\datacopy.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0
+0000 900300            2                     MOV DPTR,#MYDATA
+0003 7980              3                     MOV R1,#80H
+0005 E4                4     B1:             CLR A
+0006 93                5                     MOVC A,@A+DPTR
+0007 F7                6                     MOV @R1,A 
+0008 F580              7                     MOV P0,A
+000A 6004              8                     JZ EXIT
+000C A3                9                     INC DPTR
+000D 09               10                     INC R1
+000E 80F5             11                     SJMP B1
+0010 80FE             12     EXIT:           SJMP $
+                      13                     
+0300                  14                     ORG 300H
+0300 54686520         15     MYDATA: DB "The Promise of World Peace"
+0304 50726F6D                
+0308 69736520                
+030C 6F662057                
+0310 6F726C64                
+0314 20506561                
+0318 6365                    
+                      16                     END
+A51 MACRO ASSEMBLER  DATACOPY                                                             08/31/2022 08:01:09 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B1 . . . . . . . .  C ADDR   0005H   A   
+EXIT . . . . . . .  C ADDR   0010H   A   
+MYDATA . . . . . .  C ADDR   0300H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

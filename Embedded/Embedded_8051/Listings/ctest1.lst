@@ -1,0 +1,31 @@
+C51 COMPILER V9.60.0.0   CTEST1                                                            09/02/2022 05:07:24 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CTEST1
+OBJECT MODULE PLACED IN .\Objects\ctest1.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ctest1.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ct
+                    -est1.lst) TABS(2) OBJECT(.\Objects\ctest1.obj)
+
+line level    source
+
+   1            #include <reg51.h>
+   2            void main (void)
+   3            {
+   4   1          unsigned char z;
+   5   1          for (z=0;z<=255;z++)
+   6   1            P1=z;
+   7   1        }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     18    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

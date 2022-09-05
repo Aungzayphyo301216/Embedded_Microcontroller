@@ -1,0 +1,93 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  12:50:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Led Demo.obj TO .\Objects\Led Demo PRINT (.\Listings\Led Demo.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Led Demo.obj (LED_DEMO)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  .\Objects\Led Demo (LED_DEMO)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     001DH     UNIT         _DATA_GROUP_
+            IDATA   0025H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    08F6H     002EH     UNIT         ?PR?MAIN?LED_DEMO
+            CODE    0924H     001DH     UNIT         ?CO?LED_DEMO
+            CODE    0941H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Led Demo (LED_DEMO)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?LED_DEMO
+
+?PR?MAIN?LED_DEMO              0008H    001DH
+  +--> ?CO?LED_DEMO
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Led Demo (LED_DEMO)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED_DEMO
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:08F6H         PUBLIC        main
+  C:0924H         SYMBOL        _?ix1000
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  12:50:18  PAGE 2
+
+
+  B:0090H.0       PUBLIC        en
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        message
+  D:0007H         SYMBOL        z
+  -------         ENDDO         
+  C:08F6H         LINE#         5
+  C:08F6H         LINE#         6
+  C:08F6H         LINE#         7
+  C:0909H         LINE#         9
+  C:0915H         LINE#         10
+  C:0915H         LINE#         11
+  C:091CH         LINE#         12
+  C:091EH         LINE#         13
+  C:0920H         LINE#         14
+  C:0923H         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED_DEMO
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 004BH BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=38.0 xdata=0 code=336
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,98 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  16:15:57  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Checksum byte.obj TO .\Objects\Checksum byte PRINT (.\Listings\Checksum byte.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Checksum byte.obj (CHECKSUM_BYTE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  .\Objects\Checksum byte (CHECKSUM_BYTE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    08F6H     0036H     UNIT         ?PR?MAIN?CHECKSUM_BYTE
+            CODE    092CH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0938H     0004H     UNIT         ?CO?CHECKSUM_BYTE
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Checksum byte (CHECKSUM_BYTE)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?CHECKSUM_BYTE
+
+?PR?MAIN?CHECKSUM_BYTE         0008H    0004H
+  +--> ?CO?CHECKSUM_BYTE
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Checksum byte (CHECKSUM_BYTE)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CHECKSUM_BYTE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:08F6H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  16:15:57  PAGE 2
+
+
+  C:0938H         SYMBOL        _?ix1000
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        mydata
+  D:0007H         SYMBOL        sum
+  D:0006H         SYMBOL        x
+  D:0007H         SYMBOL        chksumbyte
+  -------         ENDDO         
+  C:08F6H         LINE#         3
+  C:08F6H         LINE#         4
+  C:08F6H         LINE#         5
+  C:0909H         LINE#         6
+  C:090BH         LINE#         9
+  C:0916H         LINE#         10
+  C:0916H         LINE#         11
+  C:091DH         LINE#         12
+  C:0921H         LINE#         13
+  C:0923H         LINE#         14
+  C:0926H         LINE#         15
+  C:0929H         LINE#         16
+  C:092BH         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        CHECKSUM_BYTE
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 003AH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=319
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

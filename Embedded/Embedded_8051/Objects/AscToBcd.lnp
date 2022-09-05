@@ -1,0 +1,3 @@
+".\Objects\AscToBcd.obj" 
+TO ".\Objects\AscToBcd" 
+PRINT(".\Listings\AscToBcd.m51")

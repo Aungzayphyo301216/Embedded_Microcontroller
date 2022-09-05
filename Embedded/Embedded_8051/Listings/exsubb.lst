@@ -1,0 +1,32 @@
+A51 MACRO ASSEMBLER  EXSUBB                                                               08/31/2022 18:24:33 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\exsubb.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exsubb.asm SET(SMALL) DEBUG PRINT(.\Listings\exsubb.lst) OBJECT(.\Objec
+                      ts\exsubb.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 7462              2                             MOV A,#62H
+0002 9496              3                             SUBB A,#96H
+0004 FA                4                             MOV R2,A
+0005 7427              5                             MOV A,#27H
+0007 9412              6                             SUBB A,#12H
+0009 FC                7                             MOV R4,A
+                       8                             END
+A51 MACRO ASSEMBLER  EXSUBB                                                               08/31/2022 18:24:33 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

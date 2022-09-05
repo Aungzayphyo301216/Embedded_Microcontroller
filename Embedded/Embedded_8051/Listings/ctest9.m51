@@ -1,0 +1,91 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  14:55:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\ctest9.obj TO .\Objects\ctest9 PRINT (.\Listings\ctest9.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\ctest9.obj (CTEST9)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\ctest9 (CTEST9)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0015H     UNIT         ?PR?MAIN?CTEST9
+            CODE    0815H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\ctest9 (CTEST9)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?CTEST9
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   _MSDELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\ctest9 (CTEST9)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CTEST9
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0800H         LINE#         3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  14:55:48  PAGE 2
+
+
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0803H         LINE#         6
+  C:0806H         LINE#         7
+  C:0806H         LINE#         8
+  C:0806H         LINE#         10
+  C:0809H         LINE#         11
+  C:080CH         LINE#         12
+  C:0813H         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        CTEST9
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MSDELAY
+    MODULE:  .\Objects\ctest9.obj (CTEST9)
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MSDELAY
+    MODULE:  .\Objects\ctest9.obj (CTEST9)
+    ADDRESS: 0811H
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0015H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=36
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

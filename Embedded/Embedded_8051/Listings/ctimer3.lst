@@ -1,0 +1,47 @@
+C51 COMPILER V9.60.0.0   CTIMER3                                                           09/03/2022 12:49:41 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CTIMER3
+OBJECT MODULE PLACED IN .\Objects\ctimer3.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ctimer3.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\c
+                    -timer3.lst) TABS(2) OBJECT(.\Objects\ctimer3.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void T1M1delay(void);
+   3          void main(void)
+   4          {
+   5   1        unsigned char x;
+   6   1        P2=0x55;
+   7   1        while(1)
+   8   1        {
+   9   2          P2=~P2;
+  10   2          for (x=0;x<20;x++)
+  11   2          T1M1delay();
+  12   2        }
+  13   1      }
+  14          void T1M1delay()
+  15          {
+  16   1      TMOD=0x01;
+  17   1        TL1=0xFE;
+  18   1        TH1=0xA5;
+  19   1        TR1=1;
+  20   1        while(TF1==0);
+  21   1        TF1=0;
+  22   1        TR1=0;
+  23   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     46    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

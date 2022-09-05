@@ -1,0 +1,3 @@
+".\Objects\checkswitch.obj" 
+TO ".\Objects\checkswitch" 
+PRINT(".\Listings\checkswitch.m51")

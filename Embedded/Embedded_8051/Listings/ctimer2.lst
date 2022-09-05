@@ -1,0 +1,49 @@
+C51 COMPILER V9.60.0.0   CTIMER2                                                           09/03/2022 07:42:22 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CTIMER2
+OBJECT MODULE PLACED IN .\Objects\ctimer2.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ctimer2.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\c
+                    -timer2.lst) TABS(2) OBJECT(.\Objects\ctimer2.obj)
+
+line level    source
+
+   1          //Write an 8051 c program to toggle only bit P1.5 continuously 
+   2          //Use timer 0, mode 1 (16 bit) to create the delay.Test the program
+   3          //on the (a)AT89C51 and (b) DS89C420.
+   4          
+   5          #include <reg51.h>
+   6          void T01Delay(void);
+   7          sbit mybit=P1^5;
+   8          void main (void)
+   9          {
+  10   1        while(1)
+  11   1        {
+  12   2          mybit=~mybit;
+  13   2          T01Delay();
+  14   2        }
+  15   1      }
+  16          void T01Delay()
+  17          {
+  18   1        TMOD= 0x01;
+  19   1        TL0=0xFD;
+  20   1        TH0=0x4B;
+  21   1        TR0=1;
+  22   1        while(TF0==1);
+  23   1        TR0=0;
+  24   1        TF0=0;
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     26    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

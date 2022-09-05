@@ -1,0 +1,38 @@
+A51 MACRO ASSEMBLER  DIVIDED                                                              08/31/2022 18:53:11 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\divided.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE divided.asm SET(SMALL) DEBUG PRINT(.\Listings\divided.lst) OBJECT(.\Obj
+                      ects\divided.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                             ORG 0000H
+0000 74FF              2                             MOV A,#0FFH
+0002 F590              3                             MOV P1,A
+0004 75F00A            4                             MOV B,#10
+0007 84                5                             DIV AB
+0008 A9F0              6                             MOV R1,B
+000A 75F00A            7                             MOV B,#10
+000D 84                8                             DIV AB
+000E AAF0              9                             MOV R2,B
+0010 FB               10                             MOV R3,A
+                      11                             END
+                                                     
+A51 MACRO ASSEMBLER  DIVIDED                                                              08/31/2022 18:53:11 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

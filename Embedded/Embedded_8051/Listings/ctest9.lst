@@ -1,0 +1,38 @@
+C51 COMPILER V9.60.0.0   CTEST9                                                            09/02/2022 14:55:48 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE CTEST9
+OBJECT MODULE PLACED IN .\Objects\ctest9.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ctest9.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\ct
+                    -est9.lst) TABS(2) OBJECT(.\Objects\ctest9.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void Msdelay (unsigned int);
+   3          void main (void)
+   4          {
+   5   1        P0=0x55;
+   6   1        P1=0x55;
+   7   1        for (;;)
+   8   1        {
+   9   2        
+  10   2          P0=~P0;
+  11   2          P1=P1^0xFF;
+  12   2          Msdelay(250);
+  13   2        }
+  14   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

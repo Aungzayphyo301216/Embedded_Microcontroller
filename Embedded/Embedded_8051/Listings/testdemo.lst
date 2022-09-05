@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  TESTDEMO                                                             08/30/2022 08:54:35 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\testdemo.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE testdemo.asm SET(SMALL) DEBUG PRINT(.\Listings\testdemo.lst) OBJECT(.\O
+                      bjects\testdemo.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0
+  0097                 2             LED BIT P1.7
+  00A0                 3                     SW BIT P2.0
+0000 A2A0              4     HERE:   MOV C,SW
+0002 9297              5                     MOV LED,C
+0004 80FA              6                     SJMP HERE
+                       7                     END
+A51 MACRO ASSEMBLER  TESTDEMO                                                             08/30/2022 08:54:35 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0000H   A   
+LED. . . . . . . .  B ADDR   0090H.7 A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+SW . . . . . . . .  B ADDR   00A0H.0 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

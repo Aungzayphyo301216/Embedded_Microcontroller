@@ -1,0 +1,46 @@
+C51 COMPILER V9.60.0.0   USING_SFR                                                         09/02/2022 14:11:46 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE USING_SFR
+OBJECT MODULE PLACED IN .\Objects\Using SFR.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Using SFR.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\Using SFR.lst) TABS(2) OBJECT(.\Objects\Using SFR.obj)
+
+line level    source
+
+   1          //Accessing Ports as sfr using sfr data type 
+   2          sfr P0=0x80;
+   3          sfr P1=0x90;
+   4          sfr P2=0xA0;
+   5          
+   6          void Msdelay (unsigned int);
+   7          
+   8          void main (void)
+   9          {
+  10   1        while (1)
+  11   1        { 
+  12   2          P0=0x55;
+  13   2          P1=0x55;
+  14   2          P2=0x55;
+  15   2          Msdelay(250);
+  16   2          P0=0xAA;
+  17   2          P1=0xAA;
+  18   2          P2=0xAA;
+  19   2          Msdelay(250);
+  20   2        }
+  21   1      }
+  22            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     34    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

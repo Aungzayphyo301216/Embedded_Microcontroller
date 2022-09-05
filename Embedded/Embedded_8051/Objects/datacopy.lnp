@@ -1,0 +1,3 @@
+".\Objects\datacopy.obj" 
+TO ".\Objects\datacopy" 
+PRINT(".\Listings\datacopy.m51")

@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  XVALUE                                                               08/30/2022 00:02:20 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\xvalue.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE xvalue.asm SET(SMALL) DEBUG PRINT(.\Listings\xvalue.lst) OBJECT(.\Objec
+                      ts\xvalue.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 759055            2                     MOV P1,#55H
+0003 7532C8            3                     MOV 32H,#200
+0006 B200              4     LOP1:   CPL P1
+*** _____________________________________^
+*** ERROR #A48 IN 4 (xvalue.asm, LINE 4): DATA-ADDRESS EXPECTED
+0008                   5                     ACALL DELAY
+*** _______________________________________________^
+*** ERROR #A45 IN 5 (xvalue.asm, LINE 5): UNDEFINED SYMBOL (PASS-2)
+000A D532F9            6                     DJNZ 32H,LOP1
+                       7                     END
+                                             
+A51 MACRO ASSEMBLER  XVALUE                                                               08/30/2022 00:02:20 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .    ----   -----       
+LOP1 . . . . . . .  C ADDR   0006H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 2 ERROR(S)

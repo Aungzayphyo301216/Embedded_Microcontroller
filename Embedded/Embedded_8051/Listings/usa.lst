@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  USA                                                                  08/29/2022 10:57:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\usa.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE usa.asm SET(SMALL) DEBUG PRINT(.\Listings\usa.lst) OBJECT(.\Objects\usa
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 900200            2                     MOV DPTR,#200H
+0003 E4                3                     CLR A
+0004 93                4                     MOVC A,@A+DPTR
+0005 F8                5                     MOV R0,A
+0006 A3                6                     INC DPTR
+0007 E4                7                     CLR A
+0008 93                8                     MOVC A,@A+DPTR
+0009 F9                9                     MOV R1,A
+000A A3               10                     INC DPTR 
+000B E4               11                     CLR A
+000C 93               12                     MOVC A,@A+DPTR
+000D FA               13                     MOV R2,A
+000E 80FE             14     HERE:   SJMP HERE
+                      15     
+0200                  16                     ORG 200H
+0200 555341           17     MYDATA:DB "USA"
+                      18                     END
+                                     
+A51 MACRO ASSEMBLER  USA                                                                  08/29/2022 10:57:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   000EH   A   
+MYDATA . . . . . .  C ADDR   0200H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

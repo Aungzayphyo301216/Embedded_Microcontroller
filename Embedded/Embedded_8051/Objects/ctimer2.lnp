@@ -1,0 +1,3 @@
+".\Objects\ctimer2.obj" 
+TO ".\Objects\ctimer2" 
+PRINT(".\Listings\ctimer2.m51") RAMSIZE(256) 

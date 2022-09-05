@@ -1,0 +1,100 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/03/2022  12:49:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\ctimer3.obj TO .\Objects\ctimer3 PRINT (.\Listings\ctimer3.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\ctimer3.obj (CTIMER3)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\ctimer3 (CTIMER3)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001BH     UNIT         ?PR?MAIN?CTIMER3
+            CODE    081BH     0013H     UNIT         ?PR?T1M1DELAY?CTIMER3
+            CODE    082EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\ctimer3 (CTIMER3)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?CTIMER3
+
+?PR?MAIN?CTIMER3               0008H    0001H
+  +--> ?PR?T1M1DELAY?CTIMER3
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\ctimer3 (CTIMER3)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CTIMER3
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:081BH         PUBLIC        T1M1delay
+  C:0800H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  B:0088H.7       PUBLIC        TF1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/03/2022  12:49:42  PAGE 2
+
+
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        x
+  -------         ENDDO         
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+  C:0800H         LINE#         6
+  C:0803H         LINE#         7
+  C:0803H         LINE#         8
+  C:0803H         LINE#         9
+  C:0806H         LINE#         10
+  C:0814H         LINE#         11
+  -------         ENDPROC       MAIN
+  -------         PROC          T1M1DELAY
+  C:081BH         LINE#         14
+  C:081BH         LINE#         15
+  C:081BH         LINE#         16
+  C:081EH         LINE#         17
+  C:0821H         LINE#         18
+  C:0824H         LINE#         19
+  C:0826H         LINE#         20
+  C:0829H         LINE#         21
+  C:082BH         LINE#         22
+  C:082DH         LINE#         23
+  -------         ENDPROC       T1M1DELAY
+  -------         ENDMOD        CTIMER3
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002EH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=10.0 xdata=0 code=61
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

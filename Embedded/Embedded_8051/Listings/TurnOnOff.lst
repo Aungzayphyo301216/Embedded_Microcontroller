@@ -1,0 +1,35 @@
+C51 COMPILER V9.60.0.0   TURNONOFF                                                         09/02/2022 14:21:18 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE TURNONOFF
+OBJECT MODULE PLACED IN .\Objects\TurnOnOff.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE TurnOnOff.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\TurnOnOff.lst) TABS(2) OBJECT(.\Objects\TurnOnOff.obj)
+
+line level    source
+
+   1          
+   2          sbit mybit=0x95;
+   3          void main (void)
+   4          { 
+   5   1        unsigned int z;
+   6   1        for (z=0;z<50000;z++)
+   7   1            {
+   8   2                mybit=1;
+   9   2                mybit=0;
+  10   2            }
+  11   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     30    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

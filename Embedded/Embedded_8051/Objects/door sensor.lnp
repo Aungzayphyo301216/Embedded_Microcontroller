@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\Door Senor.obj" 
+TO ".\Objects\door sensor" 
+PRINT(".\Listings\door sensor.m51")

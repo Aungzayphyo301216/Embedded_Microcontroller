@@ -1,0 +1,100 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/02/2022  14:11:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Using SFR.obj TO .\Objects\Using SFR PRINT (.\Listings\Using SFR.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Using SFR.obj (USING_SFR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Using SFR (USING_SFR)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0022H     UNIT         ?PR?MAIN?USING_SFR
+            CODE    0822H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Using SFR (USING_SFR)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?USING_SFR
+
+
+
+UNRESOLVED EXTERNAL SYMBOLS:
+   _MSDELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Using SFR (USING_SFR)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        USING_SFR
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/02/2022  14:11:46  PAGE 2
+
+
+  C:0800H         LINE#         8
+  C:0800H         LINE#         9
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+  C:0800H         LINE#         12
+  C:0803H         LINE#         13
+  C:0806H         LINE#         14
+  C:0809H         LINE#         15
+  C:0810H         LINE#         16
+  C:0813H         LINE#         17
+  C:0816H         LINE#         18
+  C:0819H         LINE#         19
+  C:0820H         LINE#         20
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        USING_SFR
+
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _MSDELAY
+    MODULE:  .\Objects\Using SFR.obj (USING_SFR)
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MSDELAY
+    MODULE:  .\Objects\Using SFR.obj (USING_SFR)
+    ADDRESS: 080EH
+
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _MSDELAY
+    MODULE:  .\Objects\Using SFR.obj (USING_SFR)
+    ADDRESS: 081EH
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0022H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=49
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,12 @@
+		ORG 0000H
+		MOV A,#41H
+		SETB P2.1
+		SETB P2.1
+		MOV R2,#8
+HERE:   RRC A
+		MOV P2.1,C
+		DJNZ R2,HERE
+		SETB P2.1
+		SETB P2.1
+		
+		

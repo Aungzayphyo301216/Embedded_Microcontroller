@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  OVEN                                                                 08/31/2022 06:49:40 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\oven.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE oven.asm SET(SMALL) DEBUG PRINT(.\Listings\oven.lst) OBJECT(.\Objects\o
+                      ven.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+  00A3                 2             OVEN_HOT BIT P2.3
+  0095                 3             BUZZER  BIT P1.5
+0000 30A3FD            4     HERE:   JNB OVEN_HOT,HERE ;IF OVEN IS 1 ,WILL GO NEXT OR IF IT IS 0 WILL STAT HERE
+0003                   5                     ACALL DELAY     ; WAIT TIME
+*** _______________________________________________^
+*** ERROR #A45 IN 5 (oven.asm, LINE 5): UNDEFINED SYMBOL (PASS-2)
+0005 B295              6                     CPL BUZZER      ;IT BIT WILL CHANGE 0
+0007                   7                     ACALL DELAY     ;WAIT TIME
+*** _______________________________________________^
+*** ERROR #A45 IN 7 (oven.asm, LINE 7): UNDEFINED SYMBOL (PASS-2)
+0009 80F5              8                     SJMP HERE       ; WILL GO HERE,KEEP GOING
+                       9                     END  
+A51 MACRO ASSEMBLER  OVEN                                                                 08/31/2022 06:49:40 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BUZZER . . . . . .  B ADDR   0090H.5 A   
+DELAY. . . . . . .    ----   -----       
+HERE . . . . . . .  C ADDR   0000H   A   
+OVEN_HOT . . . . .  B ADDR   00A0H.3 A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 2 ERROR(S)

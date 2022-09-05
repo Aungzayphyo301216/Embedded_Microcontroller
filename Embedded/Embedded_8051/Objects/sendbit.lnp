@@ -1,0 +1,3 @@
+".\Objects\sendbit.obj" 
+TO ".\Objects\sendbit" 
+PRINT(".\Listings\sendbit.m51")

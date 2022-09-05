@@ -1,0 +1,3 @@
+".\Objects\exsubb.obj" 
+TO ".\Objects\exsubb" 
+PRINT(".\Listings\exsubb.m51")

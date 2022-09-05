@@ -1,0 +1,3 @@
+".\Objects\1s_find.obj" 
+TO ".\Objects\1s_find" 
+PRINT(".\Listings\1s_find.m51")

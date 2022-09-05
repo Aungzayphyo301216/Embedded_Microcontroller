@@ -1,0 +1,3 @@
+".\Objects\addbdc.obj" 
+TO ".\Objects\addbdc" 
+PRINT(".\Listings\addbdc.m51")

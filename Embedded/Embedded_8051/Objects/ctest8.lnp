@@ -1,0 +1,3 @@
+".\Objects\ctest8.obj" 
+TO ".\Objects\ctest8" 
+PRINT(".\Listings\ctest8.m51")

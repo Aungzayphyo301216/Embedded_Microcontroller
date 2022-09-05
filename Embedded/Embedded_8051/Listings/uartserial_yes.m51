@@ -1,0 +1,98 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    09/05/2022  06:52:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\uartserial_yes.obj TO .\Objects\uartserial_yes PRINT (.\Listings\uartserial_yes.m5
+>> 1)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\uartserial_yes.obj (UARTSERIAL_YES)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\uartserial_yes (UARTSERIAL_YES)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001CH     UNIT         ?PR?MAIN?UARTSERIAL_YES
+            CODE    081CH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0828H     0008H     UNIT         ?PR?_SER_TX?UARTSERIAL_YES
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\uartserial_yes (UARTSERIAL_YES)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?UARTSERIAL_YES
+
+?PR?MAIN?UARTSERIAL_YES
+  +--> ?PR?_SER_TX?UARTSERIAL_YES
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\uartserial_yes (UARTSERIAL_YES)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        UARTSERIAL_YES
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0828H         PUBLIC        _ser_tx
+  B:0098H.1       PUBLIC        TI
+  C:0800H         PUBLIC        main
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  09/05/2022  06:52:24  PAGE 2
+
+
+  D:0089H         PUBLIC        TMOD
+  D:008DH         PUBLIC        TH1
+  B:0088H.6       PUBLIC        TR1
+  -------         PROC          MAIN
+  C:0800H         LINE#         4
+  C:0800H         LINE#         5
+  C:0800H         LINE#         6
+  C:0803H         LINE#         7
+  C:0806H         LINE#         8
+  C:0809H         LINE#         9
+  C:080BH         LINE#         10
+  C:080BH         LINE#         11
+  C:080BH         LINE#         12
+  C:0810H         LINE#         13
+  C:0815H         LINE#         14
+  C:081AH         LINE#         15
+  -------         ENDPROC       MAIN
+  -------         PROC          _SER_TX
+  D:0007H         SYMBOL        x
+  C:0828H         LINE#         18
+  C:0828H         LINE#         19
+  C:0828H         LINE#         20
+  C:082AH         LINE#         21
+  C:082DH         LINE#         22
+  C:082FH         LINE#         23
+  -------         ENDPROC       _SER_TX
+  -------         ENDMOD        UARTSERIAL_YES
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0024H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=51
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
